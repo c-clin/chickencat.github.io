@@ -101,10 +101,6 @@ hr {
 	transform: scale(1.1);
 }
 
-.hover-img {
-    opacity:1;
-}
-
 .hover-img:hover {
     opacity:0.80;
 }
@@ -125,10 +121,6 @@ hr {
 	-moz-background-size: cover;
 	background-size: cover;
 	-o-background-size: cover;	
-}
-
-.hover-img:hover .overlay {
-  opacity: 1;
 }
 
 .overlay-text {
@@ -152,8 +144,6 @@ hr {
 	background-color: #fffff4;
 	padding: 80px 0;
 }
-
-
 
 /*contact*/
 .outro {
