@@ -2,7 +2,6 @@ body {
 	font-family: 'Glegoo', serif;
 }
 
-
 /*navigation*/
 .nav-link {
 	font-size: 1.3em;
@@ -173,7 +172,6 @@ hr {
 }
 
 /*footer*/
-
 #footer {
 	background-color: #222226;
 	text-align: center;
@@ -187,12 +185,13 @@ hr {
 }
 
 /* Turn off parallax scrolling for all tablets and phones. */
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-device-width: 768px) {
     .parallax {
         background-attachment: scroll;
     }
 }
 
+/* Adjust the about me sections on small screens */
 @media only screen and (max-width: 768px) {
 	.img-thumbnail {
 		float: none;
