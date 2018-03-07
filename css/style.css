@@ -1,4 +1,4 @@
-html {
+body {
 	font-family: 'Glegoo', serif;
 }
 
@@ -8,6 +8,7 @@ html {
 	font-size: 1.3em;
 	cursor: pointer;
 	text-shadow: 0px 1px 5px #000000;
+	transition: 0.8s 0.2s;
 }
 
 .intro {
@@ -184,7 +185,15 @@ hr {
 /*footer*/
 
 #footer {
-	background-color: #000000;
+	background-color: #222226;
+	text-align: center;
+	font-size: small;
+	padding: 3px;
+	color: #fffff4;
+}
+
+.footer {
+	margin: 3px
 }
 
 /* Turn off parallax scrolling for all tablets and phones. */
