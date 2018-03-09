@@ -48,6 +48,13 @@ hr {
     margin-top: 0px; }
   #about-me .img-thumbnail {
     float: right; }
+    @media only screen and (max-width: 768px) {
+      #about-me .img-thumbnail {
+        float: none;
+        margin: auto; } }
+  @media only screen and (max-width: 768px) {
+    #about-me .about-me-section {
+      margin: auto; } }
   #about-me .summary {
     padding-top: 20px;
     margin-top: 0px; }
@@ -78,6 +85,9 @@ hr {
     -webkit-transition: all 0.3s;
     -ms-transition: all 0.3s;
     transition: all 0.3s; }
+    @media only screen and (max-width: 768px) {
+      #portfolio .work-img {
+        padding: 60px; } }
   #portfolio .work-img:hover {
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
@@ -149,18 +159,7 @@ hr {
 
 /* Turn off parallax scrolling for all tablets and phones. */
 @media only screen and (max-device-width: 768px) {
-  .parallax {
+  .intro #portfolio #contact-me {
     background-attachment: scroll; } }
-/* Adjust the about me sections on small screens */
-@media only screen and (max-width: 768px) {
-  #about-me .img-thumbnail {
-    float: none;
-    margin: auto; }
-
-  .about-me-section {
-    margin: auto; }
-
-  .work-img {
-    padding: 60px; } }
 
 /*# sourceMappingURL=main.css.map */

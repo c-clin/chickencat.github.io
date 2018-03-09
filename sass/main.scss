@@ -49,6 +49,7 @@ hr {
 #about-me {
 	background-color: $almond;
 	padding: 80px 0;
+
 	.thumbnail {
 		padding-top: 20px;
 		margin-top: 0px;
@@ -56,6 +57,17 @@ hr {
 
 	.img-thumbnail {
 		float: right;
+
+		@media only screen and (max-width: 768px) {
+				float: none;
+				margin: auto;
+		}		
+	}
+
+	.about-me-section {
+		@media only screen and (max-width: 768px) {
+			margin: auto;
+		}		
 	}
 
 	.summary {
@@ -90,6 +102,10 @@ hr {
 		-webkit-transition: all 0.3s;
 		-ms-transition: all 0.3s;
 		transition: all 0.3s;
+
+		@media only screen and (max-width: 768px) {
+		    padding: 60px;
+		}
 	}
 
 	.work-img:hover {
@@ -171,22 +187,7 @@ hr {
 
 /* Turn off parallax scrolling for all tablets and phones. */
 @media only screen and (max-device-width: 768px) {
-    .parallax {
+ .intro #portfolio #contact-me {
         background-attachment: scroll;
     }
-}
-
-/* Adjust the about me sections on small screens */
-@media only screen and (max-width: 768px) {
-	#about-me .img-thumbnail {
-		float: none;
-		margin: auto;
-	}
-	.about-me-section {
-		margin: auto;
-	}
-
-	.work-img {
-    padding: 60px;
-	}
 }
