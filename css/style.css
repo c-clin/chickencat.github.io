@@ -159,8 +159,44 @@ hr {
 
 /* Turn off parallax scrolling for all tablets and phones. */
 @media only screen and (max-device-width: 768px) {
-  .intro #portfolio #contact-me {
-    top: 0 !important;
-    background-attachment: scroll !important; } }
+  .intro {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    background: url(../images/intro.jpg);
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover; }
+
+  #portfolio {
+    width: 100%;
+    background: url(../images/work.jpg);
+    height: auto;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover; }
+
+  #contact-me {
+    width: 100%;
+    background: url(../images/outro.jpg);
+    height: 500px;
+    background-attachment: scroll !important;
+    background-position: center center !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover; } }
 
 /*# sourceMappingURL=main.css.map */

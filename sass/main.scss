@@ -23,7 +23,7 @@ hr {
 	padding: 0;
 	background:url(../images/intro.jpg);
     height: 750px; 
-	@include paralax-scrolling;
+	@include parallax-scrolling;
 
 	.intro-text {
 		margin: auto;
@@ -82,7 +82,7 @@ hr {
 		width: 100%;
 		background:url(../images/work.jpg);
 	    height: auto; 
-		@include paralax-scrolling;
+		@include parallax-scrolling;
 
 	.portfolio-section {
 		padding-top: 80px;
@@ -142,7 +142,7 @@ hr {
 	width: 100%;
 	background:url(../images/outro.jpg);
     height: 700px; 
-	@include paralax-scrolling;
+	@include parallax-scrolling;
 
 	#contact-font {
 		padding-top: 80px;
@@ -187,7 +187,25 @@ hr {
 
 /* Turn off parallax scrolling for all tablets and phones. */
 @media only screen and (max-device-width: 768px) {
- .intro #portfolio #contact-me {
-        background-attachment: scroll !important;
-    }
+	 .intro {
+	 	width: 100%;
+	 	height: auto;
+		padding: 0;
+		background:url(../images/intro.jpg);
+		@include no-parallax;
+	 }
+
+	 #portfolio {
+		width: 100%;
+		background:url(../images/work.jpg);
+	    height: auto; 
+	    @include no-parallax;	
+	 } 
+
+	 #contact-me {
+		width: 100%;
+		background:url(../images/outro.jpg);
+	    height: 500px; 
+	    @include no-parallax;
+	}
 }
