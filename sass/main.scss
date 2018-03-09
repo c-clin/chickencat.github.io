@@ -83,7 +83,7 @@ hr {
 
 	.work-img {
 		padding: 10px;
-		max-width: 100%;
+		width: 100%;
 		height: auto;
 
 		-moz-transition: all 0.3s;
@@ -178,7 +178,7 @@ hr {
 
 /* Adjust the about me sections on small screens */
 @media only screen and (max-width: 768px) {
-	.img-thumbnail {
+	#about-me .img-thumbnail {
 		float: none;
 		margin: auto;
 	}
