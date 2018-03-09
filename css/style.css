@@ -1,6 +1,8 @@
 body {
   font-family: 'Glegoo', serif;
-  background-color: #fffff4; }
+  background: -webkit-linear-gradient(#ffffff, #fffcc1, #ffe8a0);
+  background: -o-linear-gradient(#ffffff, #fffcc1, #ffe8a0);
+  background: linear-gradient(#ffffff, #fffcc1, #ffe8a0); }
 
 hr {
   width: 100px;
