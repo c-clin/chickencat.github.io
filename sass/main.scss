@@ -2,7 +2,7 @@
 
 body {
 	font-family: 'Glegoo', serif;
-	background-color: #fffff4;
+	background-color: $almond;
 }
 
 hr {
@@ -14,7 +14,7 @@ hr {
 .nav-link {
 	font-size: 1.3em;
 	cursor: pointer;
-	text-shadow: $text-shadow #000000;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 	transition: 0.8s 0.2s;
 }
 
@@ -99,10 +99,6 @@ hr {
 		transform: scale(1.1);
 	}
 
-	.hover-img:hover {
-	    opacity:0.80;
-	}
-
 	.overlay-text {
 		color: #FFFFFF;
 		font-size: 20px;
@@ -129,13 +125,35 @@ hr {
 #contact-me {
 	width: 100%;
 	background:url(../images/outro.jpg);
-    height: 500px; 
+    height: 700px; 
 	@include paralax-scrolling;
 
 	#contact-font {
 		padding-top: 80px;
 		color: #FFFFFF;
 	}	
+	
+	.resume-button {
+	    text-transform: uppercase;
+	    display: inline-block;
+	    position: relative;
+	    text-align: center;
+	    color: white;
+	    left: 50%;
+	    transform: translateX(-50%);
+	    margin-top: 180px;
+	    background-color: transparent;
+	    border: 1px solid;
+	    padding: 18px 28px;
+	    font-family: 'Glegoo', serif;
+	}
+	.resume-button:hover {
+		color: #000000;
+		background-color: $almond;
+	    border: 1px solid black;
+	    cursor: pointer;
+	}
+
 }
 
 /*footer*/
