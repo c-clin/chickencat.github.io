@@ -111,6 +111,8 @@ hr {
 	}
 
 	.work-img:hover {
+		-webkit-filter: brightness(0.30);
+    	filter: brightness(0.30);
 		-moz-transform: scale(1.1);
 		-webkit-transform: scale(1.1);
 		-ms-transform: scale(1.1);
