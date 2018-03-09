@@ -160,5 +160,7 @@ hr {
 /* Turn off parallax scrolling for all tablets and phones. */
 @media only screen and (max-device-width: 768px) {
   .intro #portfolio #contact-me {
+    top: 0 !important;
     background-attachment: scroll !important; } }
 
+/*# sourceMappingURL=main.css.map */
