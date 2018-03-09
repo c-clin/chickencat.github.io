@@ -154,7 +154,7 @@ hr {
 	    display: inline-block;
 	    position: relative;
 	    text-align: center;
-	    color: white;
+	    color: #FFFFFF;
 	    left: 50%;
 	    transform: translateX(-50%);
 	    margin-top: 180px;
@@ -165,8 +165,7 @@ hr {
 	}
 	.resume-button:hover {
 		color: #000000;
-		background-color: $almond;
-	    border: 1px solid black;
+		background-color:  #78549e;
 	    cursor: pointer;
 	}
 

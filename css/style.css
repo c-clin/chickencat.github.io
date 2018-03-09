@@ -133,7 +133,7 @@ hr {
     display: inline-block;
     position: relative;
     text-align: center;
-    color: white;
+    color: #FFFFFF;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 180px;
@@ -143,8 +143,7 @@ hr {
     font-family: 'Glegoo', serif; }
   #contact-me .resume-button:hover {
     color: #000000;
-    background-color: #fffff4;
-    border: 1px solid black;
+    background-color: #78549e;
     cursor: pointer; }
 
 /*footer*/
