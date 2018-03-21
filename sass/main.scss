@@ -153,6 +153,7 @@ hr {
 		color: #FFFFFF;
 	}	
 	
+
 	.resume-button {
 	    text-transform: uppercase;
 	    display: inline-block;
@@ -166,11 +167,14 @@ hr {
 	    border: 1px solid;
 	    padding: 18px 28px;
 	    font-family: 'Glegoo', serif;
+	    outline: none;
+	    @include transition(.3s ease-in-out);
 	}
 	.resume-button:hover {
 		color: #000000;
 		background-color:  #78549e;
 	    cursor: pointer;
+	    @include transition(.3s ease-in-out);
 	}
 
 }

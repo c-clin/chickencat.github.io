@@ -144,11 +144,20 @@ hr {
     background-color: transparent;
     border: 1px solid;
     padding: 18px 28px;
-    font-family: 'Glegoo', serif; }
+    font-family: 'Glegoo', serif;
+    outline: none;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
   #contact-me .resume-button:hover {
     color: #000000;
     background-color: #78549e;
-    cursor: pointer; }
+    cursor: pointer;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out; }
 
 /*footer*/
 #footer {
