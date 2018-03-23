@@ -9,6 +9,22 @@ $(document).ready(function() {
 	});
 });
 
+// add dim nav-bar
+$(function(){
+    $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        var os = $('.intro').offset().top; 
+        var ht = $('.intro').height(); 
+        if(scroll > os + ht){
+            $(".navbar").css("background", "rgba(0,0,0,0.8)");
+            $(".navbar").css("transition", ".4s ease-in-out");
+        } else {
+        	$(".navbar").css("background", "transparent");
+        	$(".navbar").css("transition", ".4s ease-in-out");
+        }
+    });
+});
+
 // open resume
 $(document).ready(function() {
 	$('.resume-button').click(function() {
