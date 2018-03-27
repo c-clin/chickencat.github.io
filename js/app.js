@@ -13,7 +13,7 @@ $(document).ready(function() {
 $(function(){
     $(window).scroll(function() {
         var scroll = $(window).scrollTop();
-        var os = $('.intro').offset().top; 
+        var os = -2 // dim trans starts t #about 
         var ht = $('.intro').height(); 
         if(scroll > os + ht){
             $(".navbar").css("background", "rgba(0,0,0,0.8)");
