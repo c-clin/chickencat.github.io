@@ -16,7 +16,9 @@
     "url": "https://github.com/c-clin/c-clin.github.io/issues"
   },
   "homepage": "https://github.com/c-clin/c-clin.github.io#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp-changed": "^3.2.0"
+  },
   "dependencies": {
     "gulp": "^3.9.1",
     "gulp-sass": "^3.2.1"

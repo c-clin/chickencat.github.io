@@ -22,27 +22,37 @@ hr {
 .intro {
 	width: 100%;
 	padding: 0;
-	background:url(../images/intro.jpg);
+	background:url(../images/new-intro.jpg); // Photo by Anas Alshanti on Unsplash
     height: 750px; 
 	@include parallax-scrolling;
 
 	.intro-text {
-		margin: auto;
-		padding-top: 490px;
+		position: relative;
+		margin: 0;
+		padding: 0;
 		padding-bottom: 300px;
 
+		@media only screen and (max-width: 768px) {
+			padding-bottom: 550px;
+		}
+
 	}
 
-	#title {
-		font-family: 'Anton', sans-serif;
-		text-shadow: $text-shadow #6a6c70;
-		color: #ffffff;
-		font-size:4em;
-	}
+	#sub-title {
+		font-family: 'IBM Plex Mono', monospace;
+		display: inline-block;
+		font-size: 2.3em;
+		text-shadow: $text-shadow #000000;
+		color: white;
+		position: absolute;
+		margin-right: 0;
+		padding-right: 0;
+		top: 80%;
 
-	#sub-title{
-		color: #c9c9dd;
-		text-shadow: $text-shadow #323438;
+		@media only screen and (max-width: 768px) {
+			top: 40%;
+	 		font-size: 2em;
+		}
 	}
 }
 
@@ -124,6 +134,7 @@ hr {
 		position: absolute;
 		top: 50%;
 		left: 50%;
+		margin: 0 auto;
 		transform: translate(-50%, -50%);
 		-webkit-transform: translate(-50%, -50%);
 		-ms-transform: translate(-50%, -50%);
@@ -197,7 +208,7 @@ hr {
 	 	width: 100%;
 	 	height: auto;
 		padding: 0;
-		background:url(../images/intro.jpg);
+		background:url(../images/new-intro.jpg);
 		@include no-parallax;
 	 }
 
@@ -215,3 +226,4 @@ hr {
 	    @include no-parallax;
 	}
 }
+
