@@ -17,6 +17,8 @@ hr {
 .intro {
   width: 100%;
   padding: 0;
+  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
+  background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
   background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
   height: 750px;
   background-attachment: fixed;
@@ -39,7 +41,7 @@ hr {
     font-family: 'IBM Plex Mono', monospace;
     display: inline-block;
     font-size: 2.3em;
-    text-shadow: 0px 1px 5px #000000;
+    text-shadow: -shadow #000000;
     color: white;
     position: absolute;
     margin-right: 0;
@@ -52,7 +54,7 @@ hr {
 
 /*about me*/
 #about-me {
-  background-color: #fffff4;
+  background-color: #fff3e6;
   padding: 80px 0; }
   #about-me .thumbnail {
     padding-top: 20px;
@@ -73,7 +75,9 @@ hr {
 /*portfolio*/
 #portfolio {
   width: 100%;
-  background: url(../images/work.jpg);
+  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
+  background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
   height: auto;
   background-attachment: fixed;
   background-position: center;
@@ -123,13 +127,15 @@ hr {
 
 /*skills*/
 #skills {
-  background-color: #fffff4;
+  background-color: #fff3e6;
   padding: 80px 0; }
 
 /*contact*/
 #contact-me {
   width: 100%;
-  background: url(../images/outro.jpg);
+  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+  background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
   height: 700px;
   background-attachment: fixed;
   background-position: center;
@@ -142,6 +148,13 @@ hr {
   #contact-me #contact-font {
     padding-top: 80px;
     color: #FFFFFF; }
+  #contact-me a {
+    color: #2bcbba;
+    margin-right: 10px; }
+    #contact-me a:hover {
+      color: #FC427B; }
+    #contact-me a:last-child {
+      margin-right: 0; }
   #contact-me .resume-button {
     text-transform: uppercase;
     display: inline-block;
@@ -162,7 +175,7 @@ hr {
     transition: 0.3s ease-in-out; }
   #contact-me .resume-button:hover {
     color: #000000;
-    background-color: #78549e;
+    background-color: #D6A2E8;
     cursor: pointer;
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
@@ -185,7 +198,9 @@ hr {
     width: 100%;
     height: auto;
     padding: 0;
-    background: url(../images/new-intro.jpg);
+    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
+    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
+    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
     background-attachment: scroll !important;
     background-position: center center !important;
     background-repeat: no-repeat;
@@ -196,7 +211,9 @@ hr {
     background-size: cover; }
   #portfolio {
     width: 100%;
-    background: url(../images/work.jpg);
+    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
+    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
+    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
     height: auto;
     background-attachment: scroll !important;
     background-position: center center !important;
@@ -208,7 +225,9 @@ hr {
     background-size: cover; }
   #contact-me {
     width: 100%;
-    background: url(../images/outro.jpg);
+    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
     height: 500px;
     background-attachment: scroll !important;
     background-position: center center !important;
