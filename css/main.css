@@ -17,7 +17,7 @@ hr {
 .intro {
   width: 100%;
   padding: 0;
-  background: url(../images/new-intro.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
   height: 750px;
   background-attachment: fixed;
   background-position: center;

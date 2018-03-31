@@ -22,7 +22,7 @@ hr {
 .intro {
 	width: 100%;
 	padding: 0;
-	background:url(../images/new-intro.jpg); // Photo by Anas Alshanti on Unsplash
+	background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/new-intro.jpg); // Photo by Anas Alshanti on Unsplash
     height: 750px; 
 	@include parallax-scrolling;
 
