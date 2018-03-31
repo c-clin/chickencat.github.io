@@ -149,10 +149,14 @@ hr {
     padding-top: 80px;
     color: #FFFFFF; }
   #contact-me a {
-    color: #2bcbba;
+    color: #00d8d6;
     margin-right: 10px; }
-    #contact-me a:hover {
-      color: #FC427B; }
+    #contact-me a .fa-envelope:hover {
+      color: #ffda79; }
+    #contact-me a .fa-github:hover {
+      color: #3d3d3d; }
+    #contact-me a .fa-linkedin-square:hover {
+      color: #0984e3; }
     #contact-me a:last-child {
       margin-right: 0; }
   #contact-me .resume-button {
