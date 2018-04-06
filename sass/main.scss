@@ -22,9 +22,9 @@ hr {
 .intro {
 	width: 100%;
 	padding: 0;
-	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/new-intro.jpg);
-	background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/new-intro.jpg);
-	background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/new-intro.jpg); // Photo by Anas Alshanti on Unsplash
+	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg);
+	background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg);
+	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg); // Photo by Rodion Kutsaev on Unsplash
     height: 750px; 
 	@include parallax-scrolling;
 
@@ -41,10 +41,10 @@ hr {
 	}
 
 	#sub-title {
-		font-family: 'IBM Plex Mono', monospace;
+		font-family: 'Roboto Mono', monospace;
 		display: inline-block;
 		font-size: 2.3em;
-		text-shadow: -shadow #000000;
+		text-shadow: $text-shadow #999999;
 		color: white;
 		position: absolute;
 		margin-right: 0;
@@ -60,7 +60,7 @@ hr {
 
 /*about me*/ 
 #about-me {
-	background-color: #fff3e6;
+	background-color: $main-bg-color;
 	padding: 80px 0;
 
 	.thumbnail {
@@ -93,13 +93,14 @@ hr {
 /*portfolio*/
 #portfolio {
 		width: 100%;
-		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work.jpg);
-		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work.jpg);
+		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg);
+		background: -o-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg);
+		background: linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg); // Photo by ian dooley on Unsplash
 		height: auto; 
 		@include parallax-scrolling;
 
 	.portfolio-section {
+		text-shadow: $text-shadow #000000;
 		padding-top: 80px;
 		color: #FFFFFF;
 	}
@@ -109,9 +110,11 @@ hr {
 	}
 
 	.work-img {
-		padding: 10px;
+		// padding: 3px;
 		width: 100%;
 		height: auto;
+		border: 2px solid #dfe4ea;
+
 
 		-moz-transition: all 0.3s;
 		-webkit-transition: all 0.3s;
@@ -120,6 +123,7 @@ hr {
 
 		@media only screen and (max-width: 768px) {
 		    padding: 60px;
+		    border: hidden;
 		}
 	}
 
@@ -151,20 +155,21 @@ hr {
 
 /*skills*/
 #skills {
-	background-color: #fff3e6;
+	background-color: $main-bg-color;
 	padding: 80px 0;
 }
 
 /*contact*/
 #contact-me {
 	width: 100%;
-	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-	background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-	background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
+	background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
+	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg); // Photo by Jordan Whitt on Unsplash
     height: 700px; 
 	@include parallax-scrolling;
 
 	#contact-font {
+		text-shadow: $text-shadow #000000;		
 		padding-top: 80px;
 		color: #FFFFFF;
 	}	
@@ -207,8 +212,8 @@ hr {
 	    @include transition(.3s ease-in-out);
 	}
 	.resume-button:hover {
-		color: #000000;
-		background-color: #D6A2E8;
+		color: rgba(0, 0, 0, 1);
+		background-color: rgba(204, 217, 255, 0.5);
 	    cursor: pointer;
 	    @include transition(.3s ease-in-out);
 	}
@@ -221,7 +226,7 @@ hr {
 	text-align: center;
 	font-size: small;
 	padding: 3px;
-	color: $almond;
+	color: $main-bg-color;
 
 	.footer {
 		margin: 3px
@@ -234,26 +239,26 @@ hr {
 	 	width: 100%;
 	 	height: auto;
 		padding: 0;
-		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/new-intro.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/new-intro.jpg);
-		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/new-intro.jpg); 
+		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/intro.jpg);
+		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/intro.jpg);
+		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/intro.jpg); 
 		@include no-parallax;
 	 }
 
 	 #portfolio {
 		width: 100%;
-  		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work.jpg);
-		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work.jpg);
+  		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work2.jpg);
+		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work2.jpg);
+		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work2.jpg);
 	    height: auto; 
 	    @include no-parallax;	
 	 } 
 
 	 #contact-me {
 		width: 100%;
-		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
+		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
+		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
 	    height: 500px; 
 	    @include no-parallax;
 	}

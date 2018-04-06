@@ -17,9 +17,9 @@ hr {
 .intro {
   width: 100%;
   padding: 0;
-  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
-  background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
-  background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
+  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/intro.jpg);
+  background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/intro.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/intro.jpg);
   height: 750px;
   background-attachment: fixed;
   background-position: center;
@@ -38,10 +38,10 @@ hr {
       .intro .intro-text {
         padding-bottom: 550px; } }
   .intro #sub-title {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
     display: inline-block;
     font-size: 2.3em;
-    text-shadow: -shadow #000000;
+    text-shadow: 0px 1px 5px #999999;
     color: white;
     position: absolute;
     margin-right: 0;
@@ -54,7 +54,7 @@ hr {
 
 /*about me*/
 #about-me {
-  background-color: #fff3e6;
+  background-color: #faedeb;
   padding: 80px 0; }
   #about-me .thumbnail {
     padding-top: 20px;
@@ -75,9 +75,9 @@ hr {
 /*portfolio*/
 #portfolio {
   width: 100%;
-  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
-  background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
-  background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
+  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)), url(../images/work2.jpg);
+  background: -o-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)), url(../images/work2.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)), url(../images/work2.jpg);
   height: auto;
   background-attachment: fixed;
   background-position: center;
@@ -88,21 +88,23 @@ hr {
   -ms-background-size: cover;
   background-size: cover; }
   #portfolio .portfolio-section {
+    text-shadow: 0px 1px 5px #000000;
     padding-top: 80px;
     color: #FFFFFF; }
   #portfolio .port-height {
     padding-bottom: 80px; }
   #portfolio .work-img {
-    padding: 10px;
     width: 100%;
     height: auto;
+    border: 2px solid #dfe4ea;
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -ms-transition: all 0.3s;
     transition: all 0.3s; }
     @media only screen and (max-width: 768px) {
       #portfolio .work-img {
-        padding: 60px; } }
+        padding: 60px;
+        border: hidden; } }
   #portfolio .work-img:hover {
     -webkit-filter: brightness(0.3);
     filter: brightness(0.3);
@@ -127,15 +129,15 @@ hr {
 
 /*skills*/
 #skills {
-  background-color: #fff3e6;
+  background-color: #faedeb;
   padding: 80px 0; }
 
 /*contact*/
 #contact-me {
   width: 100%;
-  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-  background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-  background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+  background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
+  background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
   height: 700px;
   background-attachment: fixed;
   background-position: center;
@@ -146,6 +148,7 @@ hr {
   -ms-background-size: cover;
   background-size: cover; }
   #contact-me #contact-font {
+    text-shadow: 0px 1px 5px #000000;
     padding-top: 80px;
     color: #FFFFFF; }
   #contact-me a {
@@ -178,8 +181,8 @@ hr {
     -ms-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
   #contact-me .resume-button:hover {
-    color: #000000;
-    background-color: #D6A2E8;
+    color: black;
+    background-color: rgba(204, 217, 255, 0.5);
     cursor: pointer;
     -webkit-transition: 0.3s ease-in-out;
     -moz-transition: 0.3s ease-in-out;
@@ -192,7 +195,7 @@ hr {
   text-align: center;
   font-size: small;
   padding: 3px;
-  color: #fffff4; }
+  color: #faedeb; }
   #footer .footer {
     margin: 3px; }
 
@@ -202,9 +205,9 @@ hr {
     width: 100%;
     height: auto;
     padding: 0;
-    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
-    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
-    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/new-intro.jpg);
+    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/intro.jpg);
+    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/intro.jpg);
+    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/intro.jpg);
     background-attachment: scroll !important;
     background-position: center center !important;
     background-repeat: no-repeat;
@@ -215,9 +218,9 @@ hr {
     background-size: cover; }
   #portfolio {
     width: 100%;
-    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
-    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
-    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work.jpg);
+    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work2.jpg);
+    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work2.jpg);
+    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/work2.jpg);
     height: auto;
     background-attachment: scroll !important;
     background-position: center center !important;
@@ -229,9 +232,9 @@ hr {
     background-size: cover; }
   #contact-me {
     width: 100%;
-    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
-    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro.jpg);
+    background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
+    background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
+    background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
     height: 500px;
     background-attachment: scroll !important;
     background-position: center center !important;

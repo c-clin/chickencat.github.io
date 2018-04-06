@@ -18,7 +18,7 @@ $(document).ready(function() {
         var os = -2 // dim trans starts t #about 
         var ht = $('.intro').height(); 
         if(scroll > os + ht){
-            $(".navbar").css("background", "rgba(0,0,0,0.8)");
+            $(".navbar").css("background", "rgba(0,0,0,0.6)");
             $(".navbar").css("transition", ".4s ease-in-out");
         } else {
             $(".navbar").css("background", "transparent");
@@ -29,7 +29,8 @@ $(document).ready(function() {
     var typed = new Typed('#sub-title', {
         strings: ["hi i'm Catherine, ^500 a frontend developer^600     :)^300"],
         typeSpeed: 15,
-        loop: true
+        loop: true,
+        showCursor: false
     })
 });
 
