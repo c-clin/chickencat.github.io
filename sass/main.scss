@@ -1,9 +1,12 @@
 @import 'variables';
 
-body {
+/*-------------------------------*/
+/* BASIC SETUP */
+/*-------------------------------*/
+
+body,
+html {
 	font-family: 'Glegoo', serif;
-	background: -webkit-linear-gradient(#ffffff, #fffcc1, #ffe8a0);
-	background: -o-linear-gradient(#ffffff, #fffcc1, #ffe8a0);
 	background: linear-gradient(#ffffff, #fffcc1, #ffe8a0);
 }
 
@@ -12,7 +15,18 @@ hr {
 	background: #67676d;
 }
 
-/*navigation*/  
+*:focus {outline:none;}
+
+.clearfix:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*-------------------------------*/
+/* NAVIGATION */
+/*-------------------------------*/
+
 .nav-link {
 	font-size: 1.3em;
 	cursor: pointer;
@@ -24,7 +38,7 @@ hr {
 	padding: 0;
 	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg);
 	background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg);
-	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg); // Photo by Rodion Kutsaev on Unsplash
+	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg); /* Photo by Rodion Kutsaev on Unsplash*/
     height: 750px; 
 	@include parallax-scrolling;
 
@@ -37,7 +51,6 @@ hr {
 		@media only screen and (max-width: 768px) {
 			padding-bottom: 550px;
 		}
-
 	}
 
 	#sub-title {
@@ -58,18 +71,22 @@ hr {
 	}
 }
 
-/*about me*/ 
+/*-------------------------------*/
+/* ABOUT ME */
+/*-------------------------------*/
+
 #about-me {
 	background-color: $main-bg-color;
 	padding: 80px 0;
 
 	.thumbnail {
 		padding-top: 20px;
-		margin-top: 0px;
+		margin-top: 10px;
 	}
 
 	.img-thumbnail {
 		float: right;
+		border-radius: 50%;
 
 		@media only screen and (max-width: 768px) {
 				float: none;
@@ -77,25 +94,76 @@ hr {
 		}		
 	}
 
-	.about-me-section {
+	.who-am-i {
+		@extend %about-me-text;
+		margin: 20px 0 40px 0;
+		&:before {
+			content: 'Who I am';
+			display: block;
+			text-align: left;
+			font-weight: 700;
+			font-size: 23px;
+			margin-bottom: 10px;
+		}
 		@media only screen and (max-width: 768px) {
 			margin: auto;
+			text-align: center;
+			&:before {
+				text-align: center;
+				margin-top: 30px;
+			}
 		}		
 	}
 
-	.summary {
-		padding-top: 20px;
-		margin-top: 0px;
+	.where-ive-been {
+		@extend %about-me-text;
+		margin: 0 auto;
+		border-right: 1px solid #887382;
+		&:before {
+			content: "Where I've been";
+			display: block;
+			font-weight: 700;
+			font-size: 23px;
+			margin-top: 20px;
+			margin-bottom: 10px;			
+		}
+		@media only screen and (max-width: 768px) {
+			border: 0;
+			&:before {
+				text-align: center;
+			}
+		}	
+	}
 
+	.what-i-hope {
+		@extend %about-me-text;
+		margin: 0 auto;
+
+		&:before {
+			content: "What I hope to do";
+			display: block;
+			font-weight: 700;
+			font-size: 23px;
+			margin-top: 20px;
+			margin-bottom: 10px;			
+		}
+		@media only screen and (max-width: 768px) {
+			&:before {
+				text-align: center;
+			}
+		}
 	}
 }
 
-/*portfolio*/
+/*-------------------------------*/
+/* PORTFOLIO */
+/*-------------------------------*/
+
 #portfolio {
 		width: 100%;
 		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg);
 		background: -o-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg);
-		background: linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg); // Photo by ian dooley on Unsplash
+		background: linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg); /* Photo by ian dooley on Unsplash*/
 		height: auto; 
 		@include parallax-scrolling;
 
@@ -110,15 +178,14 @@ hr {
 	}
 
 	.work-img {
-		// padding: 3px;
+		/* padding: 3px;*/
 		width: 100%;
 		height: auto;
 		border: 2px solid #dfe4ea;
 		box-sizing: border-box;
 
-		-moz-transition: all 0.3s;
-		-webkit-transition: all 0.3s;
-		-ms-transition: all 0.3s;
+		-webkit-filter: brightness(0.9);
+    	filter: brightness(0.9);
 		transition: all 0.3s;
 
 		@media only screen and (max-width: 768px) {
@@ -130,10 +197,8 @@ hr {
 	.work-img:hover {
 		-webkit-filter: brightness(0.30);
     	filter: brightness(0.30);
-		-moz-transform: scale(1.1);
-		-webkit-transform: scale(1.1);
-		-ms-transform: scale(1.1);
-		transform: scale(1.1);
+		-webkit-transform: scale(1.05);
+		transform: scale(1.05);
 	}
 
 	.overlay-text {
@@ -153,18 +218,31 @@ hr {
 	}	
 }
 
-/*skills*/
+/*-------------------------------*/
+/* SKILLS */
+/*-------------------------------*/
+
 #skills {
 	background-color: $main-bg-color;
 	padding: 80px 0;
 }
 
-/*contact*/
+#skills p {
+	font-size: 1.2em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	padding-top: 10px;
+}
+
+/*-------------------------------*/
+/* CONTACT */
+/*-------------------------------*/
+
 #contact-me {
 	width: 100%;
 	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
 	background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
-	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg); // Photo by Jordan Whitt on Unsplash
+	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg); /* Photo by Jordan Whitt on Unsplash*/
     height: 700px; 
 	@include parallax-scrolling;
 
@@ -175,19 +253,26 @@ hr {
 	}	
 	
 	a {
-		color: #00d8d6;
+		color: #ccccff;
 		margin-right: 10px;
+		@include transition(.3s ease-in-out);
 
 		.fa-envelope:hover {
 			color: #ffda79;
+			text-shadow: 2px 2px 3px #2f3542;
+			@include transition(.3s ease-in-out);
 		}
 
 		.fa-github:hover {
 			color: #3d3d3d;
+			text-shadow: 2px 2px 3px #2f3542;
+			@include transition(.3s ease-in-out);
 		}
 
 		.fa-linkedin-square:hover {
-			color: #0984e3;
+			color: #0077b5;
+			text-shadow: 2px 2px 3px #2f3542;
+			@include transition(.3s ease-in-out);
 		}
 
 		&:last-child {
@@ -202,12 +287,14 @@ hr {
 	    text-align: center;
 	    color: #FFFFFF;
 	    left: 50%;
-	    transform: translateX(-50%);
+	    -webkit-transform: translateX(-50%);
+	            transform: translateX(-50%);
 	    margin-top: 180px;
 	    background-color: transparent;
 	    border: 1px solid;
 	    padding: 18px 28px;
-	    font-family: 'Glegoo', serif;
+	    ont-family: 'Lato', sans-serif;
+	    border-radius: 10px;
 	    outline: none;
 	    @include transition(.3s ease-in-out);
 	}
@@ -217,10 +304,12 @@ hr {
 	    cursor: pointer;
 	    @include transition(.3s ease-in-out);
 	}
-
 }
 
-/*footer*/
+/*-------------------------------*/
+/* FOOTER */
+/*-------------------------------*/
+
 #footer {
 	background-color: #222226;
 	text-align: center;
@@ -233,34 +322,49 @@ hr {
 	}	
 }
 
+/*-------------------------------*/
+/* ANIMATIONS */
+/*-------------------------------*/
+
+.js--about-me,
+.js--row-1,
+.js--row-2,
+.js--row-3 {
+	opacity: 0;
+	-webkit-animation-duration: 1s;
+	        animation-duration: 1s;
+}
+
+.js--about-me .animated,
+.js--row-1 .animated,
+.js--row-2 .animated,
+.js--row-2 .animated {
+	opacity: 1;
+}
+
 /* Turn off parallax scrolling for all tablets and phones. */
 @media only screen and (max-device-width: 768px) {
 	 .intro {
 	 	width: 100%;
-	 	height: auto;
+	 	height: 100vh;
 		padding: 0;
-		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/intro.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/intro.jpg);
 		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/intro.jpg); 
 		@include no-parallax;
 	 }
 
 	 #portfolio {
 		width: 100%;
-  		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work2.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work2.jpg);
 		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work2.jpg);
 	    height: auto; 
 	    @include no-parallax;	
 	 } 
 
 	 #contact-me {
-		width: 100%;
-		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
-		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
+ 		width: 100%;
+ 		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
+ 		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
+ 		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
 	    height: 500px; 
 	    @include no-parallax;
-	}
+	 	}
 }
-

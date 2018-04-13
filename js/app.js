@@ -32,6 +32,32 @@ $(document).ready(function() {
         loop: true,
         showCursor: false
     })
+
+    // animation on scroll
+    $('.js--about-me').waypoint(function(direction) {
+        $('.js--about-me').addClass('animated fadeInUp');
+    }, {
+        offset: '50%'
+    });
+
+    $('.js--row-1').waypoint(function(direction) {
+        $('.js--row-1').addClass('animated fadeInRight');
+    }, {
+        offset: '50%'
+    });
+
+    $('.js--row-2').waypoint(function(direction) {
+        $('.js--row-2').addClass('animated fadeInLeft');
+    }, {
+        offset: '50%'
+    });
+
+    $('.js--row-3').waypoint(function(direction) {
+        $('.js--row-3').addClass('animated fadeInUp');
+    }, {
+        offset: '50%'
+    });
+
 });
 
 
