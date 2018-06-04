@@ -7,10 +7,10 @@ $(document).ready(function() {
 
 	    return false;
 	});
-    // open resume
-    $('.resume-button').click(function() {
-        window.open('./images/Catherine-Lin-Resume.pdf', '_blank');
-    });
+    // // open resume
+    // $('.resume-button').click(function() {
+    //     window.open('./images/Portfolio-Resume.pdf', '_blank');
+    // });
 
     // add dim nav-bar
     $(window).scroll(function() {
