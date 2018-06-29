@@ -23,7 +23,7 @@ hr {
   outline: none; }
 
 .clearfix:after {
-  content: "";
+  content: '';
   clear: both;
   display: table; }
 
@@ -82,14 +82,20 @@ hr {
   padding: 80px 0; }
   #about-me .thumbnail {
     padding-top: 20px;
-    margin-top: 10px; }
-  #about-me .img-thumbnail {
-    float: right;
-    border-radius: 50%; }
-    @media only screen and (max-width: 768px) {
-      #about-me .img-thumbnail {
-        float: none;
-        margin: auto; } }
+    margin-top: 10px;
+    perspective: 1500px;
+    position: relative; }
+    #about-me .thumbnail__img-front {
+      float: right;
+      border-radius: 50%;
+      transition: all 0.8s ease;
+      border: 2px solid white; }
+      #about-me .thumbnail__img-front:hover {
+        transform: rotateY(180deg); }
+      @media only screen and (max-width: 768px) {
+        #about-me .thumbnail__img-front {
+          float: none;
+          margin: auto; } }
   #about-me .who-am-i {
     margin: 20px 0 40px 0; }
     #about-me .who-am-i:before {
@@ -124,7 +130,7 @@ hr {
   #about-me .what-i-hope {
     margin: 0 auto; }
     #about-me .what-i-hope:before {
-      content: "What I hope to do";
+      content: 'What I hope to do';
       display: block;
       font-weight: 700;
       font-size: 23px;
@@ -155,41 +161,53 @@ hr {
   #portfolio .portfolio-section {
     text-shadow: 0px 1px 5px #000000;
     padding-top: 80px;
-    color: #FFFFFF; }
+    color: #ffffff; }
   #portfolio .port-height {
     padding-bottom: 80px; }
-  #portfolio .work-img {
-    /* padding: 3px;*/
+  #portfolio .hover-img {
     width: 100%;
-    height: auto;
-    border: 2px solid #dfe4ea;
-    box-sizing: border-box;
-    -webkit-filter: brightness(0.9);
-    filter: brightness(0.9);
-    transition: all 0.3s; }
-    @media only screen and (max-width: 768px) {
-      #portfolio .work-img {
-        padding: 15px;
-        border: hidden; } }
-  #portfolio .work-img:hover {
-    -webkit-filter: brightness(0.3);
-    filter: brightness(0.3);
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05); }
-  #portfolio .overlay-text {
-    color: #FFFFFF;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 0 auto;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5em;
-    text-shadow: 0px 1px 5px #000000; }
+    overflow: hidden;
+    border-radius: 3px; }
+    #portfolio .hover-img .work-img {
+      /* padding: 3px;*/
+      width: 100%;
+      height: auto;
+      border: 2px solid #dfe4ea;
+      box-sizing: border-box;
+      border-radius: 3px;
+      -webkit-filter: brightness(0.9);
+      filter: brightness(0.9);
+      transition: all 0.3s; }
+      @media only screen and (max-width: 768px) {
+        #portfolio .hover-img .work-img {
+          padding: 15px;
+          border: hidden; } }
+    #portfolio .hover-img:hover .work-img {
+      -webkit-filter: brightness(0.3) blur(1px);
+      filter: brightness(0.3) blur(1px);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
+    #portfolio .hover-img .overlay-text {
+      color: #ffffff;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0 auto;
+      transform: translate(-50%, 100%);
+      text-align: center;
+      font-size: 1.2em;
+      opacity: 0;
+      transition: all 0.3s ease; }
+      #portfolio .hover-img .overlay-text h3 {
+        font-weight: bold;
+        font-size: 1.3em;
+        line-height: 35px; }
+      #portfolio .hover-img .overlay-text p {
+        color: #d3d3d3; }
+    #portfolio .hover-img:hover .overlay-text {
+      opacity: 1;
+      transform: translate(-50%, -50%); }
 
 /*-------------------------------*/
 /* SKILLS */
@@ -225,31 +243,34 @@ hr {
   #contact-me #contact-font {
     text-shadow: 0px 1px 5px #000000;
     padding-top: 80px;
-    color: #FFFFFF; }
+    color: #ffffff; }
   #contact-me a {
     color: #ccccff;
-    margin-right: 10px;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -ms-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out; }
+    margin-right: 15px;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    transition: 0.3s ease; }
     #contact-me a .fa-envelope:hover {
       color: #ffda79;
-      text-shadow: 2px 2px 3px #2f3542;
+      text-shadow: 2px 2px 15px #2f3542;
+      transform: scale(1.2);
       -webkit-transition: 0.3s ease-in-out;
       -moz-transition: 0.3s ease-in-out;
       -ms-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out; }
     #contact-me a .fa-github:hover {
       color: #3d3d3d;
-      text-shadow: 2px 2px 3px #2f3542;
+      text-shadow: 2px 2px 15px #2f3542;
+      transform: scale(1.2);
       -webkit-transition: 0.3s ease-in-out;
       -moz-transition: 0.3s ease-in-out;
       -ms-transition: 0.3s ease-in-out;
       transition: 0.3s ease-in-out; }
     #contact-me a .fa-linkedin-square:hover {
       color: #0077b5;
-      text-shadow: 2px 2px 3px #2f3542;
+      text-shadow: 2px 2px 15px #2f3542;
+      transform: scale(1.2);
       -webkit-transition: 0.3s ease-in-out;
       -moz-transition: 0.3s ease-in-out;
       -ms-transition: 0.3s ease-in-out;
@@ -261,7 +282,7 @@ hr {
     display: inline-block;
     position: relative;
     text-align: center;
-    color: #FFFFFF;
+    color: #ffffff;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -269,7 +290,7 @@ hr {
     background-color: transparent;
     border: 1px solid;
     padding: 18px 28px;
-    ont-family: 'Lato', sans-serif;
+    font-family: 'Lato', sans-serif;
     border-radius: 10px;
     outline: none;
     -webkit-transition: 0.3s ease-in-out;

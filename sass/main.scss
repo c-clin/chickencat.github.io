@@ -6,21 +6,23 @@
 
 body,
 html {
-	font-family: 'Glegoo', serif;
-	background: linear-gradient(#ffffff, #fffcc1, #ffe8a0);
+  font-family: 'Glegoo', serif;
+  background: linear-gradient(#ffffff, #fffcc1, #ffe8a0);
 }
 
 hr {
-	width: 100px;
-	background: #67676d;
+  width: 100px;
+  background: #67676d;
 }
 
-*:focus {outline:none;}
+*:focus {
+  outline: none;
+}
 
 .clearfix:after {
-    content: "";
-    clear: both;
-    display: table;
+  content: '';
+  clear: both;
+  display: table;
 }
 
 /*-------------------------------*/
@@ -28,47 +30,56 @@ hr {
 /*-------------------------------*/
 
 .nav-link {
-	font-size: 1.3em;
-	cursor: pointer;
-	transition: 0.8s 0.2s;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: 0.8s 0.2s;
 }
 
 .intro {
-	width: 100%;
-	padding: 0;
-	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg);
-	background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg);
-	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),url(../images/intro.jpg); /* Photo by Rodion Kutsaev on Unsplash*/
-    height: 750px; 
-	@include parallax-scrolling;
+  width: 100%;
+  padding: 0;
+  background: -webkit-linear-gradient(
+      rgba(247, 135, 191, 0.3),
+      rgba(168, 11, 89, 0.3)
+    ),
+    url(../images/intro.jpg);
+  background: -o-linear-gradient(
+      rgba(247, 135, 191, 0.3),
+      rgba(168, 11, 89, 0.3)
+    ),
+    url(../images/intro.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),
+    url(../images/intro.jpg); /* Photo by Rodion Kutsaev on Unsplash*/
+  height: 750px;
+  @include parallax-scrolling;
 
-	.intro-text {
-		position: relative;
-		margin: 0;
-		padding: 0;
-		padding-bottom: 300px;
+  .intro-text {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 300px;
 
-		@media only screen and (max-width: 768px) {
-			padding-bottom: 550px;
-		}
-	}
+    @media only screen and (max-width: 768px) {
+      padding-bottom: 550px;
+    }
+  }
 
-	#sub-title {
-		font-family: 'Roboto Mono', monospace;
-		display: inline-block;
-		font-size: 2.3em;
-		text-shadow: $text-shadow #999999;
-		color: white;
-		position: absolute;
-		margin-right: 0;
-		padding-right: 0;
-		top: 80%;
+  #sub-title {
+    font-family: 'Roboto Mono', monospace;
+    display: inline-block;
+    font-size: 2.3em;
+    text-shadow: $text-shadow #999999;
+    color: white;
+    position: absolute;
+    margin-right: 0;
+    padding-right: 0;
+    top: 80%;
 
-		@media only screen and (max-width: 768px) {
-			top: 40%;
-	 		font-size: 2em;
-		}
-	}
+    @media only screen and (max-width: 768px) {
+      top: 40%;
+      font-size: 2em;
+    }
+  }
 }
 
 /*-------------------------------*/
@@ -76,83 +87,91 @@ hr {
 /*-------------------------------*/
 
 #about-me {
-	background-color: $main-bg-color;
-	padding: 80px 0;
+  background-color: $main-bg-color;
+  padding: 80px 0;
 
-	.thumbnail {
-		padding-top: 20px;
-		margin-top: 10px;
-	}
+  .thumbnail {
+    padding-top: 20px;
+    margin-top: 10px;
+    perspective: 1500px;
+    position: relative;
 
-	.img-thumbnail {
-		float: right;
-		border-radius: 50%;
+    &__img-front {
+      float: right;
+      border-radius: 50%;
+      transition: all 0.8s ease;
+      border: 2px solid white;
 
-		@media only screen and (max-width: 768px) {
-				float: none;
-				margin: auto;
-		}		
-	}
+      &:hover {
+        transform: rotateY(180deg);
+      }
 
-	.who-am-i {
-		@extend %about-me-text;
-		margin: 20px 0 40px 0;
-		&:before {
-			content: 'Who I am';
-			display: block;
-			text-align: left;
-			font-weight: 700;
-			font-size: 23px;
-			margin-bottom: 10px;
-		}
-		@media only screen and (max-width: 768px) {
-			margin: auto;
-			text-align: center;
-			&:before {
-				text-align: center;
-				margin-top: 30px;
-			}
-		}		
-	}
+      @media only screen and (max-width: 768px) {
+        float: none;
+        margin: auto;
+      }
+    }
+  }
 
-	.where-ive-been {
-		@extend %about-me-text;
-		margin: 0 auto;
-		border-right: 1px solid #887382;
-		&:before {
-			content: "Where I've been";
-			display: block;
-			font-weight: 700;
-			font-size: 23px;
-			margin-top: 20px;
-			margin-bottom: 10px;			
-		}
-		@media only screen and (max-width: 768px) {
-			border: 0;
-			&:before {
-				text-align: center;
-			}
-		}	
-	}
+  .who-am-i {
+    @extend %about-me-text;
+    margin: 20px 0 40px 0;
+    &:before {
+      content: 'Who I am';
+      display: block;
+      text-align: left;
+      font-weight: 700;
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 768px) {
+      margin: auto;
+      text-align: center;
+      &:before {
+        text-align: center;
+        margin-top: 30px;
+      }
+    }
+  }
 
-	.what-i-hope {
-		@extend %about-me-text;
-		margin: 0 auto;
+  .where-ive-been {
+    @extend %about-me-text;
+    margin: 0 auto;
+    border-right: 1px solid #887382;
+    &:before {
+      content: "Where I've been";
+      display: block;
+      font-weight: 700;
+      font-size: 23px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 768px) {
+      border: 0;
+      &:before {
+        text-align: center;
+      }
+    }
+  }
 
-		&:before {
-			content: "What I hope to do";
-			display: block;
-			font-weight: 700;
-			font-size: 23px;
-			margin-top: 20px;
-			margin-bottom: 10px;			
-		}
-		@media only screen and (max-width: 768px) {
-			&:before {
-				text-align: center;
-			}
-		}
-	}
+  .what-i-hope {
+    @extend %about-me-text;
+    margin: 0 auto;
+
+    &:before {
+      content: 'What I hope to do';
+      display: block;
+      font-weight: 700;
+      font-size: 23px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 768px) {
+      &:before {
+        text-align: center;
+      }
+    }
+  }
 }
 
 /*-------------------------------*/
@@ -160,62 +179,91 @@ hr {
 /*-------------------------------*/
 
 #portfolio {
-		width: 100%;
-		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg);
-		background: -o-linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg);
-		background: linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),url(../images/work2.jpg); /* Photo by ian dooley on Unsplash*/
-		height: auto; 
-		@include parallax-scrolling;
+  width: 100%;
+  background: -webkit-linear-gradient(
+      rgba(247, 135, 191, 0.5),
+      rgba(168, 11, 89, 0.5)
+    ),
+    url(../images/work2.jpg);
+  background: -o-linear-gradient(
+      rgba(247, 135, 191, 0.5),
+      rgba(168, 11, 89, 0.5)
+    ),
+    url(../images/work2.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.5), rgba(168, 11, 89, 0.5)),
+    url(../images/work2.jpg); /* Photo by ian dooley on Unsplash*/
+  height: auto;
+  @include parallax-scrolling;
 
-	.portfolio-section {
-		text-shadow: $text-shadow #000000;
-		padding-top: 80px;
-		color: #FFFFFF;
-	}
+  .portfolio-section {
+    text-shadow: $text-shadow #000000;
+    padding-top: 80px;
+    color: #ffffff;
+  }
 
-	.port-height {
-		padding-bottom: 80px;
-	}
+  .port-height {
+    padding-bottom: 80px;
+  }
 
-	.work-img {
-		/* padding: 3px;*/
-		width: 100%;
-		height: auto;
-		border: 2px solid #dfe4ea;
-		box-sizing: border-box;
+  .hover-img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 3px;
 
-		-webkit-filter: brightness(0.9);
-    	filter: brightness(0.9);
-		transition: all 0.3s;
+    .work-img {
+      /* padding: 3px;*/
+      width: 100%;
+      height: auto;
+      border: 2px solid #dfe4ea;
+      box-sizing: border-box;
+      border-radius: 3px;
 
-		@media only screen and (max-width: 768px) {
-		    padding: 15px;
-		    border: hidden;
-		}
-	}
+      -webkit-filter: brightness(0.9);
+      filter: brightness(0.9);
+      transition: all 0.3s;
 
-	.work-img:hover {
-		-webkit-filter: brightness(0.30);
-    	filter: brightness(0.30);
-		-webkit-transform: scale(1.05);
-		transform: scale(1.05);
-	}
+      @media only screen and (max-width: 768px) {
+        padding: 15px;
+        border: hidden;
+      }
+    }
 
-	.overlay-text {
-		color: #FFFFFF;
-		font-size: 20px;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		margin: 0 auto;
-		transform: translate(-50%, -50%);
-		-webkit-transform: translate(-50%, -50%);
-		-ms-transform: translate(-50%, -50%);
-		text-align: center;	
-		font-weight: bold;
-		font-size: 1.5em;
-		text-shadow: $text-shadow #000000;
-	}	
+    &:hover .work-img {
+      -webkit-filter: brightness(0.3) blur(1px);
+      filter: brightness(0.3) blur(1px);
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+    }
+
+    .overlay-text {
+      color: #ffffff;
+      font-size: 20px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: 0 auto;
+      transform: translate(-50%, 100%);
+      text-align: center;
+      font-size: 1.2em;
+      opacity: 0;
+      transition: all 0.3s ease;
+
+      & h3 {
+        font-weight: bold;
+        font-size: 1.3em;
+        line-height: 35px;
+      }
+
+      & p {
+        color: #d3d3d3;
+      }
+    }
+
+    &:hover .overlay-text {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
 }
 
 /*-------------------------------*/
@@ -223,15 +271,15 @@ hr {
 /*-------------------------------*/
 
 #skills {
-	background-color: $main-bg-color;
-	padding: 80px 0;
+  background-color: $main-bg-color;
+  padding: 80px 0;
 }
 
 #skills p {
-	font-size: 1.2em;
-	font-family: 'Lato', sans-serif;
-	font-weight: 300;
-	padding-top: 10px;
+  font-size: 1.2em;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  padding-top: 10px;
 }
 
 /*-------------------------------*/
@@ -239,71 +287,83 @@ hr {
 /*-------------------------------*/
 
 #contact-me {
-	width: 100%;
-	background: -webkit-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
-	background: -o-linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg);
-	background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)), url(../images/outro2.jpg); /* Photo by Jordan Whitt on Unsplash*/
-    height: 700px; 
-	@include parallax-scrolling;
+  width: 100%;
+  background: -webkit-linear-gradient(
+      rgba(247, 135, 191, 0.3),
+      rgba(168, 11, 89, 0.3)
+    ),
+    url(../images/outro2.jpg);
+  background: -o-linear-gradient(
+      rgba(247, 135, 191, 0.3),
+      rgba(168, 11, 89, 0.3)
+    ),
+    url(../images/outro2.jpg);
+  background: linear-gradient(rgba(247, 135, 191, 0.3), rgba(168, 11, 89, 0.3)),
+    url(../images/outro2.jpg); /* Photo by Jordan Whitt on Unsplash*/
+  height: 700px;
+  @include parallax-scrolling;
 
-	#contact-font {
-		text-shadow: $text-shadow #000000;		
-		padding-top: 80px;
-		color: #FFFFFF;
-	}	
-	
-	a {
-		color: #ccccff;
-		margin-right: 10px;
-		@include transition(.3s ease-in-out);
+  #contact-font {
+    text-shadow: $text-shadow #000000;
+    padding-top: 80px;
+    color: #ffffff;
+  }
 
-		.fa-envelope:hover {
-			color: #ffda79;
-			text-shadow: 2px 2px 3px #2f3542;
-			@include transition(.3s ease-in-out);
-		}
+  a {
+    color: #ccccff;
+    margin-right: 15px;
+    @include transition(0.3s ease);
 
-		.fa-github:hover {
-			color: #3d3d3d;
-			text-shadow: 2px 2px 3px #2f3542;
-			@include transition(.3s ease-in-out);
-		}
+    .fa-envelope:hover {
+      color: #ffda79;
+      text-shadow: 2px 2px 15px #2f3542;
+      transform: scale(1.2);
+      @include transition(0.3s ease-in-out);
+    }
 
-		.fa-linkedin-square:hover {
-			color: #0077b5;
-			text-shadow: 2px 2px 3px #2f3542;
-			@include transition(.3s ease-in-out);
-		}
+    .fa-github:hover {
+      color: #3d3d3d;
+      text-shadow: 2px 2px 15px #2f3542;
+      transform: scale(1.2);
+      @include transition(0.3s ease-in-out);
+    }
 
-		&:last-child {
-			margin-right: 0;
-		}
-	}
+    .fa-linkedin-square:hover {
+      color: #0077b5;
+      text-shadow: 2px 2px 15px #2f3542;
+      transform: scale(1.2);
+      @include transition(0.3s ease-in-out);
+    }
 
-	.resume-button {
-	    text-transform: uppercase;
-	    display: inline-block;
-	    position: relative;
-	    text-align: center;
-	    color: #FFFFFF;
-	    left: 50%;
-	    -webkit-transform: translateX(-50%);
-	            transform: translateX(-50%);
-	    margin-top: 180px;
-	    background-color: transparent;
-	    border: 1px solid;
-	    padding: 18px 28px;
-	    ont-family: 'Lato', sans-serif;
-	    border-radius: 10px;
-	    outline: none;
-	    @include transition(.3s ease-in-out);
-	}
-	.resume-button:hover {
-		color: rgba(0, 0, 0, 1);
-		background-color: rgba(204, 217, 255, 0.5);
-	    cursor: pointer;
-	    @include transition(.3s ease-in-out);
-	}
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .resume-button {
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin-top: 180px;
+    background-color: transparent;
+    border: 1px solid;
+    padding: 18px 28px;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
+    outline: none;
+    @include transition(0.3s ease-in-out);
+  }
+  .resume-button:hover {
+    color: rgba(0, 0, 0, 1);
+    background-color: rgba(204, 217, 255, 0.5);
+    cursor: pointer;
+    @include transition(0.3s ease-in-out);
+  }
 }
 
 /*-------------------------------*/
@@ -311,15 +371,15 @@ hr {
 /*-------------------------------*/
 
 #footer {
-	background-color: #222226;
-	text-align: center;
-	font-size: small;
-	padding: 3px;
-	color: $main-bg-color;
+  background-color: #222226;
+  text-align: center;
+  font-size: small;
+  padding: 3px;
+  color: $main-bg-color;
 
-	.footer {
-		margin: 3px
-	}	
+  .footer {
+    margin: 3px;
+  }
 }
 
 /*-------------------------------*/
@@ -330,41 +390,61 @@ hr {
 .js--row-1,
 .js--row-2,
 .js--row-3 {
-	opacity: 0;
-	-webkit-animation-duration: 1s;
-	        animation-duration: 1s;
+  opacity: 0;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
 }
 
 .js--about-me .animated,
 .js--row-1 .animated,
 .js--row-2 .animated,
 .js--row-2 .animated {
-	opacity: 1;
+  opacity: 1;
 }
 
 /* Turn off parallax scrolling for all tablets and phones. */
 @media only screen and (max-device-width: 768px) {
-	 .intro {
-	 	width: 100%;
-	 	height: 100vh;
-		padding: 0;
-		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/intro.jpg); 
-		@include no-parallax;
-	 }
+  .intro {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    background: linear-gradient(
+        rgba(247, 135, 191, 0.2),
+        rgba(168, 11, 89, 0.2)
+      ),
+      url(../images/intro.jpg);
+    @include no-parallax;
+  }
 
-	 #portfolio {
-		width: 100%;
-		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)),url(../images/work2.jpg);
-	    height: auto; 
-	    @include no-parallax;	
-	 } 
+  #portfolio {
+    width: 100%;
+    background: linear-gradient(
+        rgba(247, 135, 191, 0.2),
+        rgba(168, 11, 89, 0.2)
+      ),
+      url(../images/work2.jpg);
+    height: auto;
+    @include no-parallax;
+  }
 
-	 #contact-me {
- 		width: 100%;
- 		background: -webkit-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
- 		background: -o-linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
- 		background: linear-gradient(rgba(247, 135, 191, 0.2), rgba(168, 11, 89, 0.2)), url(../images/outro2.jpg);
-	    height: 500px; 
-	    @include no-parallax;
-	 	}
+  #contact-me {
+    width: 100%;
+    background: -webkit-linear-gradient(
+        rgba(247, 135, 191, 0.2),
+        rgba(168, 11, 89, 0.2)
+      ),
+      url(../images/outro2.jpg);
+    background: -o-linear-gradient(
+        rgba(247, 135, 191, 0.2),
+        rgba(168, 11, 89, 0.2)
+      ),
+      url(../images/outro2.jpg);
+    background: linear-gradient(
+        rgba(247, 135, 191, 0.2),
+        rgba(168, 11, 89, 0.2)
+      ),
+      url(../images/outro2.jpg);
+    height: 500px;
+    @include no-parallax;
+  }
 }
