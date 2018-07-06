@@ -7,6 +7,7 @@
 body,
 html {
   font-family: 'Glegoo', serif;
+  box-sizing: border-box;
   background: linear-gradient(#ffffff, #fffcc1, #ffe8a0);
 }
 
@@ -198,7 +199,7 @@ hr {
   .portfolio-section {
     text-shadow: $text-shadow #000000;
     padding-top: 80px;
-    color: #ffffff;
+    color: $color-light-grey;
   }
 
   .port-height {
@@ -236,17 +237,18 @@ hr {
     }
 
     .overlay-text {
-      color: #ffffff;
+      color: $color-light-grey;
       font-size: 20px;
       position: absolute;
       top: 50%;
       left: 50%;
       margin: 0 auto;
-      transform: translate(-50%, 100%);
+      transform: translate(-50%, 20%);
       text-align: center;
       font-size: 1.2em;
       opacity: 0;
       transition: all 0.3s ease;
+      z-index: -1;
 
       & h3 {
         font-weight: bold;
@@ -260,8 +262,34 @@ hr {
     }
 
     &:hover .overlay-text {
+      z-index: 1;
       opacity: 1;
       transform: translate(-50%, -50%);
+    }
+  }
+
+  .projects-link {
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 130px auto 50px auto;
+    font-size: 22px;
+    color: $color-light-grey;
+    text-decoration: none;
+    transition: all 0.4s;
+
+    span {
+      margin-left: 1px;
+      transition: margin-left 0.2s;
+    }
+
+    &:hover {
+      color: purple;
+      background-color: rgba(#fff, 0.7);
+
+      span {
+        margin-left: 19px;
+      }
     }
   }
 }
@@ -306,33 +334,33 @@ hr {
   #contact-font {
     text-shadow: $text-shadow #000000;
     padding-top: 80px;
-    color: #ffffff;
+    color: $color-light-grey;
   }
 
   a {
     color: #ccccff;
-    margin-right: 15px;
+
     @include transition(0.3s ease);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    & > *:hover {
+      transform: scale(1.2);
+      @include transition(0.3s ease-in-out);
+    }
 
     .fa-envelope:hover {
       color: #ffda79;
-      text-shadow: 2px 2px 15px #2f3542;
-      transform: scale(1.2);
-      @include transition(0.3s ease-in-out);
     }
 
     .fa-github:hover {
       color: #3d3d3d;
-      text-shadow: 2px 2px 15px #2f3542;
-      transform: scale(1.2);
-      @include transition(0.3s ease-in-out);
     }
 
     .fa-linkedin-square:hover {
       color: #0077b5;
-      text-shadow: 2px 2px 15px #2f3542;
-      transform: scale(1.2);
-      @include transition(0.3s ease-in-out);
     }
 
     &:last-child {
@@ -357,12 +385,13 @@ hr {
     border-radius: 10px;
     outline: none;
     @include transition(0.3s ease-in-out);
-  }
-  .resume-button:hover {
-    color: rgba(0, 0, 0, 1);
-    background-color: rgba(204, 217, 255, 0.5);
-    cursor: pointer;
-    @include transition(0.3s ease-in-out);
+
+    &:hover {
+      color: rgba(0, 0, 0, 1);
+      background-color: rgba(204, 217, 255, 0.5);
+      cursor: pointer;
+      @include transition(0.3s ease-in-out);
+    }
   }
 }
 

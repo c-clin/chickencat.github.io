@@ -13,6 +13,7 @@
 body,
 html {
   font-family: 'Glegoo', serif;
+  box-sizing: border-box;
   background: linear-gradient(#ffffff, #fffcc1, #ffe8a0); }
 
 hr {
@@ -161,7 +162,7 @@ hr {
   #portfolio .portfolio-section {
     text-shadow: 0px 1px 5px #000000;
     padding-top: 80px;
-    color: #ffffff; }
+    color: #f4f2f2; }
   #portfolio .port-height {
     padding-bottom: 80px; }
   #portfolio .hover-img {
@@ -188,17 +189,18 @@ hr {
       -webkit-transform: scale(1.1);
       transform: scale(1.1); }
     #portfolio .hover-img .overlay-text {
-      color: #ffffff;
+      color: #f4f2f2;
       font-size: 20px;
       position: absolute;
       top: 50%;
       left: 50%;
       margin: 0 auto;
-      transform: translate(-50%, 100%);
+      transform: translate(-50%, 20%);
       text-align: center;
       font-size: 1.2em;
       opacity: 0;
-      transition: all 0.3s ease; }
+      transition: all 0.3s ease;
+      z-index: -1; }
       #portfolio .hover-img .overlay-text h3 {
         font-weight: bold;
         font-size: 1.3em;
@@ -206,8 +208,26 @@ hr {
       #portfolio .hover-img .overlay-text p {
         color: #d3d3d3; }
     #portfolio .hover-img:hover .overlay-text {
+      z-index: 1;
       opacity: 1;
       transform: translate(-50%, -50%); }
+  #portfolio .projects-link {
+    cursor: pointer;
+    text-align: center;
+    display: block;
+    margin: 130px auto 50px auto;
+    font-size: 22px;
+    color: #f4f2f2;
+    text-decoration: none;
+    transition: all 0.4s; }
+    #portfolio .projects-link span {
+      margin-left: 1px;
+      transition: margin-left 0.2s; }
+    #portfolio .projects-link:hover {
+      color: purple;
+      background-color: rgba(255, 255, 255, 0.7); }
+      #portfolio .projects-link:hover span {
+        margin-left: 19px; }
 
 /*-------------------------------*/
 /* SKILLS */
@@ -243,38 +263,27 @@ hr {
   #contact-me #contact-font {
     text-shadow: 0px 1px 5px #000000;
     padding-top: 80px;
-    color: #ffffff; }
+    color: #f4f2f2; }
   #contact-me a {
     color: #ccccff;
-    margin-right: 15px;
     -webkit-transition: 0.3s ease;
     -moz-transition: 0.3s ease;
     -ms-transition: 0.3s ease;
     transition: 0.3s ease; }
+    #contact-me a:not(:last-child) {
+      margin-right: 30px; }
+    #contact-me a > *:hover {
+      transform: scale(1.2);
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      -ms-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
     #contact-me a .fa-envelope:hover {
-      color: #ffda79;
-      text-shadow: 2px 2px 15px #2f3542;
-      transform: scale(1.2);
-      -webkit-transition: 0.3s ease-in-out;
-      -moz-transition: 0.3s ease-in-out;
-      -ms-transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out; }
+      color: #ffda79; }
     #contact-me a .fa-github:hover {
-      color: #3d3d3d;
-      text-shadow: 2px 2px 15px #2f3542;
-      transform: scale(1.2);
-      -webkit-transition: 0.3s ease-in-out;
-      -moz-transition: 0.3s ease-in-out;
-      -ms-transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out; }
+      color: #3d3d3d; }
     #contact-me a .fa-linkedin-square:hover {
-      color: #0077b5;
-      text-shadow: 2px 2px 15px #2f3542;
-      transform: scale(1.2);
-      -webkit-transition: 0.3s ease-in-out;
-      -moz-transition: 0.3s ease-in-out;
-      -ms-transition: 0.3s ease-in-out;
-      transition: 0.3s ease-in-out; }
+      color: #0077b5; }
     #contact-me a:last-child {
       margin-right: 0; }
   #contact-me .resume-button {
@@ -297,14 +306,14 @@ hr {
     -moz-transition: 0.3s ease-in-out;
     -ms-transition: 0.3s ease-in-out;
     transition: 0.3s ease-in-out; }
-  #contact-me .resume-button:hover {
-    color: black;
-    background-color: rgba(204, 217, 255, 0.5);
-    cursor: pointer;
-    -webkit-transition: 0.3s ease-in-out;
-    -moz-transition: 0.3s ease-in-out;
-    -ms-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out; }
+    #contact-me .resume-button:hover {
+      color: black;
+      background-color: rgba(204, 217, 255, 0.5);
+      cursor: pointer;
+      -webkit-transition: 0.3s ease-in-out;
+      -moz-transition: 0.3s ease-in-out;
+      -ms-transition: 0.3s ease-in-out;
+      transition: 0.3s ease-in-out; }
 
 /*-------------------------------*/
 /* FOOTER */
