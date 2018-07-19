@@ -15,7 +15,7 @@
   "bugs": {
     "url": "https://github.com/c-clin/c-clin.github.io/issues"
   },
-  "homepage": "https://github.com/c-clin/c-clin.github.io#readme",
+  "homepage": "https://github.com/c-clin/old-portfolio#readme",
   "devDependencies": {
     "gulp-changed": "^3.2.0"
   },
